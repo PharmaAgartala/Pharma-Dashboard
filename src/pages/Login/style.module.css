@@ -1,0 +1,93 @@
+.Loginmain {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Bg);
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    background: #2980B9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.Loginmain .right {
+    display: flex;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 40%;
+    background: linear-gradient(to bottom, 
+    #1f2349, #64769e);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 36px;
+    backdrop-filter: blur(10px);
+    margin: 0 1rem;
+}
+
+.Loginmain .left {
+    margin: 0 1rem;
+    width: 40%;
+    height: 90%;
+    /* background: rgba(255, 255, 255, 0.05); */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 36px;
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+
+}
+.Loginmain .left h2{
+    font-size: 2.8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #52608c;
+}
+.Loginmain .left h2 .sp{
+    font-size: 2.4rem;
+}
+.Loginmain .left input{
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 36px;
+    backdrop-filter: blur(10px);
+    outline: none;
+    border: none;
+}
+.Loginmain .left input::placeholder{
+    font-size: 1.2rem;
+}
+.Loginmain .left button{
+    background-color: #52608c;
+    max-width: 40%;
+    border-radius: 36px;
+    outline: none;
+    border: 0px;
+   transition: 0.2s all ease-in-out;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Loginmain .left button:hover{
+    background-color: #1f2349;
+    transform: scale(1.04);
+}
+@media (max-width: 999px) {
+    .Loginmain .right{
+        display: none;
+    }
+    .Loginmain .left{
+        width: 100%;
+    }
+
+}
