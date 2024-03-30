@@ -6,8 +6,11 @@ const pool = new Pool({
 })
 
 pool.connect((err)=>{
-    if(err) console.error(err)
-    console.log('DB connection successful!')
+    if(err){
+      console.error(err);
+    }else{
+      console.log('DB connection successful!')
+    }
 })
 
 module.exports = pool

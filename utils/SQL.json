@@ -1,0 +1,9 @@
+{
+    "invoice" : {
+        "getAll" : "SELECT * FROM invoice",
+        "getByID" : "SELECT * FROM invoice WHERE invoice_number = $1",
+        "add" : "INSERT INTO invoice (distributor_name, invoice_number, amount, date, payment_type, comment, delivered_by, bill_type) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)",
+        "update" : "UPDATE invoice SET distributor_name = $1, invoice_number = $2, amount = $3, date = $4, payment_type = $5, comment = $6, delivered_by = $7, bill_type = $8 WHERE invoice_number = $2"
+    }
+
+}   
