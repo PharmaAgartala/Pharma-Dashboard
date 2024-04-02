@@ -92,40 +92,40 @@ router.delete('/remove/:id',(req,res)=>{
 });
 
 // UPLOAD CSV
-router.post('/upload', upload.single('excelFile'), async (req, res) => {
-    try {
-      if (!req.file) {
-        return res.status(400).json({ message: 'No Excel file uploaded!' });
-      }
+// router.post('/upload', upload.single('excelFile'), async (req, res) => {
+//     try {
+//       if (!req.file) {
+//         return res.status(400).json({ message: 'No Excel file uploaded!' });
+//       }
   
-      const filePath = req.file.path;
-      const workbook = XLSX.readFile(filePath);
-      const sheetName = workbook.SheetNames[0]; 
-      const worksheet = workbook.Sheets[sheetName];  
-      const jsonData = XLSX.utils.sheet_to_json(worksheet);
-      await fs.promises.unlink(filePath);
+//       const filePath = req.file.path;
+//       const workbook = XLSX.readFile(filePath);
+//       const sheetName = workbook.SheetNames[0]; 
+//       const worksheet = workbook.Sheets[sheetName];  
+//       const jsonData = XLSX.utils.sheet_to_json(worksheet);
+//       await fs.promises.unlink(filePath);
 
-      let sqlInsert = "INSERT INTO invoice (distributor_name, invoice_number, amount, date, payment_type, comment, delivered_by, bill_type) VALUES";
-      let values = [];
-      jsonData.forEach(record => {
-        const date = ExcelDateToJSDate(record["Date"]);
-        values.push(`('${record["Distributor Name"]}', ${record["Invoice Number"]}, ${record["Amount"]}, '${date}', '${record["Type"]}', '${record["Comments"]}', '${record["Delivered by"]}', '${record["Bill Type"]}')`);
-      });
-      sqlInsert += values.join(",") + ";"
+//       let sqlInsert = "INSERT INTO invoice (distributor_name, invoice_number, amount, date, payment_type, comment, delivered_by, bill_type) VALUES";
+//       let values = [];
+//       jsonData.forEach(record => {
+//         const date = ExcelDateToJSDate(record["Date"]);
+//         values.push(`('${record["Distributor Name"]}', ${record["Invoice Number"]}, ${record["Amount"]}, '${date}', '${record["Type"]}', '${record["Comments"]}', '${record["Delivered by"]}', '${record["Bill Type"]}')`);
+//       });
+//       sqlInsert += values.join(",") + ";"
     
-      pool.query(sqlInsert, (err, result) => {
-        if (err) {
-          console.error(err);
-          res.status(500).json({ message: 'Error processing CSV file' });
-        } else {
-          res.status(200).json({ message: 'All Invoice Added successfully' });
-        }
-      });
+//       pool.query(sqlInsert, (err, result) => {
+//         if (err) {
+//           console.error(err);
+//           res.status(500).json({ message: 'Error processing CSV file' });
+//         } else {
+//           res.status(200).json({ message: 'All Invoice Added successfully' });
+//         }
+//       });
 
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ message: 'Error processing Excel file' });
-    }
-  });
+//     } catch (error) {
+//       console.error(error);
+//       res.status(500).json({ message: 'Error processing Excel file' });
+//     }
+//   });
 
 module.exports = router
