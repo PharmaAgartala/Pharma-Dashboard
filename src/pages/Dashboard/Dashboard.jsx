@@ -32,15 +32,17 @@ const Dashboard = () => {
           </ul>
         </div>
       </div>
-      <div className={styles.maincontent} >
-        <Navbar />
-        <div>
-          <Routes>
-            <Route path="/" element={<Allinvoice />} />
-            <Route path="allinvoice" element={<Allinvoice />} />
-            <Route path="addinvoice" element={<Addinvoice />} />
+      <div>
+          <Navbar />
+        <div className={styles.maincontent} >
+          <div>
+            <Routes>
+              <Route path="/" element={<Allinvoice />} />
+              <Route path="allinvoice" element={<Allinvoice />} />
+              <Route path="addinvoice" element={<Addinvoice />} />
 
-          </Routes>
+            </Routes>
+          </div>
         </div>
       </div>
     </div>

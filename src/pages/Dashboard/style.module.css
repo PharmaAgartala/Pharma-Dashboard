@@ -1,0 +1,22 @@
+.main{
+    background-color: #b5c2ca;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .sidebar{
+    width: 20vw;
+    height: 90vh;
+    background-color: #fff;
+
+
+}
+.main .maincontent{
+    width: 72vw;
+    height: 90vh;
+    background-color: #fff;
+}
