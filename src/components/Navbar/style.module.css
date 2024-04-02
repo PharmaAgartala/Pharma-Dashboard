@@ -4,13 +4,15 @@
     background-color: #fff;
     border-radius: 10px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: 2rem;
     margin-bottom: 0.4rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
+.main .buttons{
+    display: flex;
+}
 .main a {
     color: #fff;
     text-decoration: none;

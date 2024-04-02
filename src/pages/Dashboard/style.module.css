@@ -10,7 +10,7 @@
 }
 
 .main .sidebar {
-    width: 22vw;
+    width: 20vw;
     height: 90vh;
     background-color: #fff;
     padding: 1rem;
@@ -83,10 +83,11 @@
 
 .main .maincontent {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 74vw;
+    width: 76vw;
     height: 80vh;
     background-color: #fff;
     border-radius: 10px;
     padding: 1rem;
+    overflow-y: auto;
 
 }
