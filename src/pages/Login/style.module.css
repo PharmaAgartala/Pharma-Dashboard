@@ -7,7 +7,8 @@
     justify-content: center;
     align-items: center;
     color: #fff;
-    background: linear-gradient(12deg, rgba(2, 0, 36, 1) 0%, rgb(43, 6, 15) 26%);
+    /* background: linear-gradient(12deg, rgba(2, 0, 36, 1) 0%, rgb(43, 6, 15) 26%); */
+    background-color: #b5c2ca;
 }
 
 .Loginmain .right {
@@ -22,7 +23,7 @@
     border-radius: 36px;
     backdrop-filter: blur(10px);
     margin: 0 1rem;
-    
+
 }
 
 .Loginmain .left {
@@ -30,7 +31,7 @@
     width: 40%;
     height: 90%;
     /* background: rgba(255, 255, 255, 0.05); */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); */
     border-radius: 36px;
     backdrop-filter: blur(10px);
     padding: 1rem;
@@ -38,46 +39,62 @@
     flex-direction: column;
     font-size: 1.8rem;
     padding: 1rem 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    /* background: rgba(255, 255, 255, 0.1); */
+    /* backdrop-filter: blur(10px); */
     border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* border: 1px solid rgba(255, 255, 255, 0.2); */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.05);
     padding: 12px;
-    margin: 20px;
-    max-width: 100%;
+    /* margin: 20px; */
+    /* max-width: 100%; */
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Whitish background with transparency */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Box shadow for glass effect */
+    padding: 20px;
+    color: black;
 
 }
-.Loginmain .left h2{
+
+.Loginmain .left h2 {
     font-size: 2.8rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     /* color: #52608c; */
 }
-.Loginmain .left h2 .sp{
+
+.Loginmain .left h2 .sp {
     font-size: 2.4rem;
 }
-.Loginmain .left input{
+
+.Loginmain .left input {
     padding: 0.8rem;
     background: rgba(255, 255, 255, 0.05);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    border-radius: 36px;
+    border-radius: 10px;
     backdrop-filter: blur(10px);
     outline: none;
     border: none;
-    color: #fff;
+    color: #000000;
 }
-.Loginmain .left input::placeholder{
+
+.Loginmain .left input::placeholder {
     font-size: 1.2rem;
 }
-.Loginmain .left button{
-    background: #891835;
+
+.Loginmain .left button {
+    background: #000000;
     max-width: 40%;
     border-radius: 36px;
     outline: none;
     border: 0px;
-   transition: 0.2s all ease-in-out;
+    transition: 0.2s all ease-in-out;
     color: #fff;
     font-size: 1.4rem;
     padding: 12px 16px;
@@ -85,15 +102,18 @@
     justify-content: center;
     align-items: center;
 }
-.Loginmain .left button:hover{
+
+.Loginmain .left button:hover {
     /* background-color: #1f2349; */
     transform: scale(1.04);
 }
+
 @media (max-width: 999px) {
-    .Loginmain .right{
+    .Loginmain .right {
         display: none;
     }
-    .Loginmain .left{
+
+    .Loginmain .left {
         width: 100%;
     }
 
