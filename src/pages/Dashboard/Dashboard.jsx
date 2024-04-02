@@ -15,25 +15,25 @@ const Dashboard = () => {
       <div className={styles.sidebar} >
         <div className={styles.top}>
           <div className={styles.Logo} >
-            <VaccinesIcon /> Pharma-DashBoard
+            <VaccinesIcon className={styles.icon} /> Pharma-DashBoard
           </div>
         </div>
         <div className={styles.bottom} >
           <ul>
             <li>
-              <Link to="allinvoice"> <DashboardIcon /> All Invoice</Link>
+              <Link to="allinvoice"> <DashboardIcon className={styles.icon} /> All Invoice</Link>
             </li>
             <li>
-              <Link to="addinvoice"> <AddCircleOutlineIcon /> Add Invoice</Link>
+              <Link to="addinvoice"> <AddCircleOutlineIcon className={styles.icon} /> Add Invoice</Link>
             </li>
             <li>
-              <Link to="updateinvoice"> <PublishedWithChangesIcon /> Update Invoice</Link>
+              <Link to="updateinvoice"> <PublishedWithChangesIcon className={styles.icon} /> Update Invoice</Link>
             </li>
           </ul>
         </div>
       </div>
       <div>
-          <Navbar />
+        <Navbar />
         <div className={styles.maincontent} >
           <div>
             <Routes>

@@ -1,4 +1,4 @@
-.main{
+.main {
     background-color: #b5c2ca;
     min-height: 100vh;
     width: 100vw;
@@ -8,15 +8,85 @@
     justify-content: space-between;
     align-items: center;
 }
-.main .sidebar{
-    width: 20vw;
+
+.main .sidebar {
+    width: 22vw;
     height: 90vh;
     background-color: #fff;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Whitish background with transparency */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Box shadow for glass effect */
+    padding: 20px;
 
 
 }
-.main .maincontent{
-    width: 72vw;
-    height: 90vh;
+
+.main .sidebar ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-decoration: none;
+    margin-top: 0.4rem;
+}
+
+.main .sidebar ul li {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px 18px;
+    border-radius: 2rem;
+    transition: 0.2s all ease-in-out;
+    font-size: 1.1rem;
+}
+.main .sidebar ul li .icon{
+    margin: 0 0.4rem;
+}
+.main .sidebar ul li:hover {
+    background-color: black;
+    color: #fff;
+}
+
+.main .sidebar ul li:hover a {
+   
+    color: #fff;
+}
+
+.main .sidebar ul li a {
+    text-decoration: none;
+    color: #555556;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .sidebar .Logo {
+    border-bottom: 1px solid black;
+    /* border-radius: 2rem; */
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.2rem 0;
+}
+
+.main .sidebar .Logo .icon {
+    font-size: 2rem;
+}
+
+.main .maincontent {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 74vw;
+    height: 80vh;
     background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+
 }
