@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, Route, Routes } from 'react-router-dom';
+import React, { useEffect } from 'react'
+import { Link, Route, Routes, useNavigate } from 'react-router-dom';
 import styles from "./style.module.css"
 import VaccinesIcon from '@mui/icons-material/Vaccines';
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -9,7 +9,25 @@ import Navbar from '../../components/Navbar/Navbar';
 // import Allinvoive from '../Invoice/Allinvoice/Allinvoive';
 import Allinvoice from '../Invoice/Allinvoice/Allinvoive';
 import Addinvoice from '../Invoice/AddInvoice/Addinvoice';
+import { useGlobalContext } from '../../Context/AuthContext';
+import { toast } from 'react-toastify';
 const Dashboard = () => {
+  const Navigate = useNavigate();
+  const { auth } = useGlobalContext();
+
+  useEffect(() => {
+    const Erox = () => {
+      toast.error("Login first");
+      setTimeout(() => {
+        Navigate("/");
+      }, 1000);
+
+    }
+    if (auth === false) {
+      Erox();
+    }
+
+  }, [])
   return (
     <div className={styles.main} >
       <div className={styles.sidebar} >

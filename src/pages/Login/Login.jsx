@@ -7,18 +7,22 @@ import Loginanimation from './animation/Login.json';
 import styles from './style.module.css';
 import { Navigate } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { useGlobalContext } from '../../Context/AuthContext';
+
 const Login = () => {
   const [mail, setMail] = useState('');
   const [pwd, setPassword] = useState('');
+  const {auth, setAuth }=useGlobalContext();
 
   const navigate = useNavigate();
   const handleLogin = () => {
     const { REACT_APP_USER, REACT_APP_PWD } = process.env;
     if (mail === REACT_APP_USER && pwd === REACT_APP_PWD) {
-      toast.success('Login Success', { position: 'top-right', autoClose: 5000 });
+      setAuth(true);
+      toast.success('Login Success', { position: 'top-right', autoClose: 2000 });
       setTimeout(() => {
         navigate("/dashboard");
-      }, 3000);
+      }, 2000);
     } else {
       toast.error('Invalid email or password.');
     }
@@ -28,7 +32,7 @@ const Login = () => {
     <div className={styles.Loginmain}>
       <div className={styles.left}>
 
-        <h2>Welcome Back! <PersonIcon className={styles.sp} /></h2>
+        <h2>Welcome Back!  <PersonIcon className={styles.sp} /></h2>
         <br />
         <input value={mail} onChange={(e) => setMail(e.target.value)} type="text" placeholder='Email' />
         <br />
