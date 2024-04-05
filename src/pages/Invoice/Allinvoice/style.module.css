@@ -56,7 +56,7 @@ tr {
   position: absolute;
   bottom: 0;
   width: 200px;
-  height: 68px ;
+  height: 68px;
   /* Adjust as needed */
   /* left: 100%; */
   /* Position to the right of the clicked record */
@@ -73,28 +73,33 @@ tr {
   justify-content: center;
   align-items: flex-start;
   border-radius: 10px;
-  
+
 }
-.sideWindow p{
+
+.sideWindow p {
   font-size: 12px;
 }
-.sideWindow .closeButton{
+
+.sideWindow .closeButton {
   width: 100%;
   display: flex;
- justify-content: space-between;
- align-items:center ;
+  justify-content: space-between;
+  align-items: center;
 }
-.sideWindow .closeButton .cross{
-font-size: 18px;
-border: 1px solid #fff;
-border-radius: 50%;
+
+.sideWindow .closeButton .cross {
+  font-size: 18px;
+  border: 1px solid #fff;
+  border-radius: 50%;
 }
-.sideWindow a{
+
+.sideWindow a {
   color: #ffffff;
   font-size: 0.8rem;
   text-decoration: none;
 }
-.sideWindow a:hover{
+
+.sideWindow a:hover {
   border-bottom: 1px solid #fff;
 }
 
@@ -115,4 +120,29 @@ th {
 
 tr:hover {
   background-color: #f1f1f1;
+}
+
+.main .inputBox {
+  width: 98%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main .inputBox .searchinput {
+  padding: 6px 12px;
+  border-radius: 10px;
+  outline: 0;
+  border: 1px solid #ccc;
+
+}
+
+
+.main .inputBox .inputlist {
+  padding: 6px 12px;
+  border-radius: 10px;
+  outline: 0;
+  border: 1px solid #630000;
+  max-height: 200px;
+  /* Set max height for the input field */
+  overflow-y: auto;
 }
