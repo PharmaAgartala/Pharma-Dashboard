@@ -127,7 +127,7 @@ const Allinvoice = () => {
             <p>{selectedRecord.distributor_name}</p>
             <ClearIcon className={styles.cross} onClick={handleCloseSidebar} />
           </div>
-          <Link to="#">View Record</Link>
+          <Link to={`../viewinvoice/${selectedRecord.invoice_number}`}>View Record</Link>
           <Link to="#">Update Record</Link>
         </div>
       )}
