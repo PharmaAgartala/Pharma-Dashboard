@@ -51,7 +51,7 @@ router.post('/add',(req,res)=>{
 // UPDATE Invoice
 router.put('/update/:id', async (req,res)=>{
     const getByID = invoice.getByID;
-    if(getByID) res.status(500).send({message: "ID NOT FOUND"});
+    if(!req.params.id) res.status(500).send({message: "ID NOT FOUND"});
 
     pool.query(getByID, [req.params.id], (err, result)=>{
         if(err){
