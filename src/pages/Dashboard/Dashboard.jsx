@@ -6,12 +6,12 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import PublishedWithChangesIcon from '@mui/icons-material/PublishedWithChanges';
 import Navbar from '../../components/Navbar/Navbar';
-// import Allinvoive from '../Invoice/Allinvoice/Allinvoive';
 import Allinvoice from '../Invoice/Allinvoice/Allinvoive';
 import Addinvoice from '../Invoice/AddInvoice/Addinvoice';
 import { useGlobalContext } from '../../Context/AuthContext';
 import { toast } from 'react-toastify';
 import ViewInvoice from '../Invoice/ViewInvoice/ViewInvoice';
+import UpdateInvoice from '../Invoice/UpdateInvoice/UpdateInvoice';
 const Dashboard = () => {
   const Navigate = useNavigate();
   const { auth } = useGlobalContext();
@@ -60,7 +60,7 @@ const Dashboard = () => {
               <Route path="allinvoice" element={<Allinvoice />} />
               <Route path="addinvoice" element={<Addinvoice />} />
               <Route path="viewinvoice/:id" element={<ViewInvoice />} />
-
+              <Route path='updateinvoice' element={<UpdateInvoice />} />
             </Routes>
           </div>
         </div>
