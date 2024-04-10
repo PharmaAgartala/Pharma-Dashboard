@@ -112,8 +112,8 @@ const UpdateInvoice = () => {
                             list="distributorList"
                         />
                         <datalist id="distributorList">
-                            {data.map((item, index) => (
-                                <option key={index} value={item.distributor_name} />
+                            {[...new Set(data.map(item => item.distributor_name))].map((item, index) => (
+                                <option key={index} value={item} />
                             ))}
                         </datalist>
                     </label>
@@ -128,8 +128,8 @@ const UpdateInvoice = () => {
                             list="invoiceNumberList"
                         />
                         <datalist id="invoiceNumberList">
-                            {data.map((item, index) => (
-                                <option key={index} value={item.invoice_number} />
+                            {[...new Set(data.map(item => item.invoice_number))].map((item, index) => (
+                                <option key={index} value={item} />
                             ))}
                         </datalist>
                     </label>
@@ -143,8 +143,9 @@ const UpdateInvoice = () => {
                             list="amountList"
                         />
                         <datalist id="amountList">
-                            {data.map((item, index) => (
-                                <option key={index} value={item.amount} />
+                            
+                            {[...new Set(data.map(item => item.amount))].map((amount, index) => (
+                                <option key={index} value={amount} />
                             ))}
                         </datalist>
                     </label>
@@ -158,8 +159,9 @@ const UpdateInvoice = () => {
                             list="dateList"
                         />
                         <datalist id="dateList">
-                            {data.map((item, index) => (
-                                <option key={index} value={item.date.slice(0, 10)} />
+                           
+                            {data && [...new Set(data.map(item => item.date.slice(0, 10)))].map((date, index) => (
+                                <option key={index} value={date} />
                             ))}
                         </datalist>
                     </label>
@@ -173,8 +175,9 @@ const UpdateInvoice = () => {
                             list="paymentTypeList"
                         />
                         <datalist id="paymentTypeList">
-                            {data.map((item, index) => (
-                                <option key={index} value={item.payment_type} />
+                            
+                            {data && [...new Set(data.map(item => item.payment_type))].map((paymentType, index) => (
+                                <option key={index} value={paymentType} />
                             ))}
                         </datalist>
                     </label>
@@ -188,8 +191,9 @@ const UpdateInvoice = () => {
                             list="commentList"
                         />
                         <datalist id="commentList">
-                            {data.map((item, index) => (
-                                <option key={index} value={item.comment} />
+                           
+                            {data && [...new Set(data.map(item => item.comment))].map((comment, index) => (
+                                <option key={index} value={comment} />
                             ))}
                         </datalist>
                     </label>
@@ -203,8 +207,9 @@ const UpdateInvoice = () => {
                             list="deliveredByList"
                         />
                         <datalist id="deliveredByList">
-                            {data.map((item, index) => (
-                                <option key={index} value={item.delivered_by} />
+                           
+                            {data && [...new Set(data.map(item => item.delivered_by))].map((deliveredBy, index) => (
+                                <option key={index} value={deliveredBy} />
                             ))}
                         </datalist>
                     </label>
@@ -218,8 +223,9 @@ const UpdateInvoice = () => {
                             list="billTypeList"
                         />
                         <datalist id="billTypeList">
-                            {data?.map((item, index) => (
-                                <option key={index} value={item.bill_type} />
+                           
+                            {data && [...new Set(data.map(item => item.bill_type))].map((billType, index) => (
+                                <option key={index} value={billType} />
                             ))}
                         </datalist>
                     </label>
