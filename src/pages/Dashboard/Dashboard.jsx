@@ -12,6 +12,7 @@ import { useGlobalContext } from '../../Context/AuthContext';
 import { toast } from 'react-toastify';
 import ViewInvoice from '../Invoice/ViewInvoice/ViewInvoice';
 import UpdateInvoice from '../Invoice/UpdateInvoice/UpdateInvoice';
+import SingleInvoiceUpdate from '../Invoice/SingleInvoiceUpdate/SingleInvoiceUpdate';
 const Dashboard = () => {
   const Navigate = useNavigate();
   const { auth } = useGlobalContext();
@@ -61,6 +62,7 @@ const Dashboard = () => {
               <Route path="addinvoice" element={<Addinvoice />} />
               <Route path="viewinvoice/:id" element={<ViewInvoice />} />
               <Route path='updateinvoice' element={<UpdateInvoice />} />
+              <Route path='invoiceupdate/:id' element={<SingleInvoiceUpdate />} />
             </Routes>
           </div>
         </div>

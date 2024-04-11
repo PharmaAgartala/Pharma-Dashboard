@@ -128,7 +128,8 @@ const Allinvoice = () => {
             <ClearIcon className={styles.cross} onClick={handleCloseSidebar} />
           </div>
           <Link to={`../viewinvoice/${selectedRecord.invoice_number}`}>View Record</Link>
-          <Link to="#">Update Record</Link>
+          <Link to={`../invoiceupdate/${selectedRecord.invoice_number}`}>Update Record</Link>
+          {/* <Link to="#">Update Record</Link> */}
         </div>
       )}
     </div>
