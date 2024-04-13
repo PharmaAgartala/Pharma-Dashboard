@@ -1,29 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import styles from "./style.module.css";
-import { useNavigate, useParams } from 'react-router-dom';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import React, { useState, useEffect } from 'react'
+import styles from './style.module.css'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 const ViewInvoice = () => {
-  const navigate = useNavigate();
-  const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const { id } = useParams();
+  const navigate = useNavigate()
+  const [data, setData] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const { id } = useParams()
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setIsLoading(true);
-        const response = await fetch(`${process.env.REACT_APP_BACKEND_Link}/invoice/${id}`);
-        const result = await response.json();
-        setData(result[0]); // Access the first item in the array
-        setIsLoading(false);
+        setIsLoading(true)
+        const response = await fetch(
+          `${process.env.REACT_APP_BACKEND_Link}/invoice/${id}`
+        )
+        const result = await response.json()
+        setData(result[0]) // Access the first item in the array
+        setIsLoading(false)
       } catch (error) {
-        console.error('Error fetching data:', error);
-        setIsLoading(false);
+        console.error('Error fetching data:', error)
+        setIsLoading(false)
       }
-    };
+    }
 
-    fetchData();
-  }, [id]);
+    fetchData()
+  }, [id])
 
   return (
     <div className={styles.main}>
@@ -69,17 +71,16 @@ const ViewInvoice = () => {
             </tbody>
           </table>
         </div>
-
-
-
       )}
       <br />
-      <button className={styles.button} >
+      <button
+        onClick={()=>navigate(`/dashboard/invoiceupdate/${id}`)}
+        className={styles.button}
+      >
         Update Record
       </button>
-
     </div>
-  );
+  )
 }
 
-export default ViewInvoice;
+export default ViewInvoice

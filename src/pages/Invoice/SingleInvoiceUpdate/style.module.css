@@ -1,0 +1,12 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+.main form{
+    height: auto;
+}
+.main button{
+    margin: 0.6rem 0;
+}
